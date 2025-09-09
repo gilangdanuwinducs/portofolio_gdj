@@ -1,43 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Gilang Danuwindu Jihantoro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header & Navbar -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">
+                        G
+                    </div>
+                    <span class="ml-3 text-xl font-bold text-gray-800">Gilang Danuwindu</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-700 hover:text-blue-600 transition duration-300">Beranda</a>
+                    <a href="#tentang" class="text-gray-700 hover:text-blue-600 transition duration-300">Tentang</a>
+                    <a href="#keahlian" class="text-gray-700 hover:text-blue-600 transition duration-300">Keahlian</a>
+                    <a href="#pengalaman" class="text-gray-700 hover:text-blue-600 transition duration-300">Pengalaman</a>
+                    <a href="#testimoni" class="text-gray-700 hover:text-blue-600 transition duration-300">Testimoni</a>
+                    <a href="#kontak" class="text-gray-700 hover:text-blue-600 transition duration-300">Kontak</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#beranda" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Beranda</a>
+                <a href="#tentang" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Tentang</a>
+                <a href="#keahlian" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Keahlian</a>
+                <a href="#pengalaman" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Pengalaman</a>
+                <a href="#testimoni" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Testimoni</a>
+                <a href="#kontak" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Kontak</a>
+            </div>
+        </nav>
+    </header>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-16 sm:pt-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+        <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+                        Halo, Saya <span class="text-yellow-300">Gilang</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6 text-gray-200">
+                        IT Network & Software Developer
+                    </h2>
+                    <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-gray-200 leading-relaxed">
+                        Lulusan Teknik Informatika dengan keahlian dalam pengembangan web, administrasi jaringan, dan pengajaran. Berpengalaman sebagai Network Technician, Web Developer, dan Guru SMK dengan sertifikasi BNSP.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:space-x-4 sm:space-y-0">
+                        <button class="bg-yellow-400 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition duration-300 w-full sm:w-auto">
+                            Lihat Portofolio
+                        </button>
+                        <button class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300 w-full sm:w-auto">
+                            Hubungi Saya
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 text-center">
+                    <div class="relative">
+                        <img src="user.jpg" alt="Gilang Danuwindu Jihantoro" class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full mx-auto object-cover border-4 sm:border-8 border-white shadow-2xl">
+                        <div class="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-yellow-400 text-gray-900 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center">
+                            <i class="fas fa-code text-lg sm:text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Saya adalah lulusan Teknik Informatika dari Universitas Jenderal Achmad Yani dengan minat mendalam di bidang IT. 
+                    Saya menyukai tantangan dan unggul dalam mengatasi masalah jaringan dan perangkat lunak.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Pendidikan</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <img src="unjani.png" alt="Logo UNJANI" class="w-12 h-12 mr-4 object-contain">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">S1 Teknik Informatika</h4>
+                                <p class="text-gray-600">Universitas Jenderal Achmad Yani (2018-2025)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="smkn4.png" alt="Logo SMKN 4" class="w-12 h-12 mr-4 object-contain">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">SMK Teknik Komputer & Jaringan</h4>
+                                <p class="text-gray-600">SMK Negeri 4 Bandung (2014-2017)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 mt-8">Sertifikasi Profesional</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-yellow-500 mr-3"></i>
+                            <span class="text-gray-700">Junior Web Programming (BNSP-2024)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-yellow-500 mr-3"></i>
+                            <span class="text-gray-700">Junior Web Developer (BNSP-2022)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-yellow-500 mr-3"></i>
+                            <span class="text-gray-700">Junior Network Administrator (BNSP-2020)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-yellow-500 mr-3"></i>
+                            <span class="text-gray-700">Cisco CCNA Routing and Switching (2017)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Lokasi & Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-4 text-xl"></i>
+                            <span class="text-gray-700">Bandung, Jawa Barat, Indonesia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 mr-4 text-xl"></i>
+                            <span class="text-gray-700">gilangdanuwinduif@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-600 mr-4 text-xl"></i>
+                            <span class="text-gray-700">+62-813-xxx-xxxx</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-blue-600 mr-4 text-xl"></i>
+                            <a href="https://www.linkedin.com/in/gilang-danuwindu-jihantoro/" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 mt-8">Bahasa</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Bahasa Indonesia</span>
+                                <span class="text-gray-600">Native</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Bahasa Inggris</span>
+                                <span class="text-gray-600">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <!-- Skills Section -->
+    <section id="keahlian" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Keahlian & Teknologi</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Berikut adalah teknologi dan tools yang saya kuasai dalam pengembangan software dan administrasi jaringan
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Web Development -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Web Development</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Laravel & CodeIgniter</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">PHP, HTML, CSS, JavaScript</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Python</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">MySQL, MS Access</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Network & Server -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-network-wired text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Network & Server</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Mikrotik Configuration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Debian 12, Ubuntu Server</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Routing & Switching</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Client-Server System</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Software -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Tools & Software</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Visual Studio Code</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">GitHub, Postman</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Android Studio, Figma</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Adobe Creative Suite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="pengalaman" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Pengalaman Kerja</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Perjalanan karir saya dalam bidang IT dan pendidikan
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Current Position -->
+                <div class="relative pl-8 pb-12">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="absolute left-2 top-4 w-0.5 h-full bg-gray-300"></div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Guru & Kepala Program Studi Informatika</h3>
+                                <p class="text-blue-600 font-semibold">SMKS Cipta Skill</p>
+                            </div>
+                            <span class="text-gray-600 bg-white px-3 py-1 rounded-full text-sm">Agustus 2023 - Sekarang</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Merancang pembelajaran untuk siswa teknik komputer jaringan dan rekayasa perangkat lunak</li>
+                            <li>• Melakukan pembelajaran teori dan praktik untuk kelas X, XI, XII</li>
+                            <li>• Menilai hasil belajar dan berkolaborasi dengan perusahaan untuk PKL siswa</li>
+                            <li>• Membuat soal ujian dan laporan rekapitulasi kelas bulanan dan semester</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Web Developer Intern -->
+                <div class="relative pl-8 pb-12">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-green-600 rounded-full"></div>
+                    <div class="absolute left-2 top-4 w-0.5 h-full bg-gray-300"></div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Web Developer Intern</h3>
+                                <p class="text-green-600 font-semibold">PT Chakra Tunggal Elektrindo</p>
+                            </div>
+                            <span class="text-gray-600 bg-white px-3 py-1 rounded-full text-sm">September - Desember 2022</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Merancang software berbasis website untuk manajemen barang menggunakan CI dan MySQL</li>
+                            <li>• Implementasi software dengan server lokal</li>
+                            <li>• Melakukan pengumpulan data unit test dan testing software menggunakan metode black box testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Network Technician -->
+                <div class="relative pl-8 pb-12">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                    <div class="absolute left-2 top-4 w-0.5 h-full bg-gray-300"></div>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Network Technician</h3>
+                                <p class="text-purple-600 font-semibold">PT Telkom (Q-Pro Agency)</p>
+                            </div>
+                            <span class="text-gray-600 bg-white px-3 py-1 rounded-full text-sm">Juli - Desember 2017</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Instalasi jaringan wifi ke rumah pelanggan</li>
+                            <li>• Troubleshoot masalah jaringan di rumah pelanggan</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Intern at PT Pasifik Link -->
+                <div class="relative pl-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-orange-600 rounded-full"></div>
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Intern</h3>
+                                <p class="text-orange-600 font-semibold">PT Pasifik Link</p>
+                            </div>
+                            <span class="text-gray-600 bg-white px-3 py-1 rounded-full text-sm">Januari - April 2016</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Instalasi dan konfigurasi komputer pengguna</li>
+                            <li>• Troubleshoot masalah jaringan di pelanggan</li>
+                            <li>• Instalasi jaringan wifi di kampus universitas baleendah</li>
+                            <li>• Test konfigurasi Mikrotik dengan server</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Testimoni Klien</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Berikut adalah beberapa testimoni dari klien dan rekan kerja yang telah bekerja sama dengan saya
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Ahmad Rizki</h4>
+                            <p class="text-gray-600 text-sm">Kepala Sekolah SMKS</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Gilang adalah guru yang sangat kompeten dan berdedikasi. Kemampuannya dalam mengajar dan mengelola program studi informatika sangat luar biasa."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                            S
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Sari Indah</h4>
+                            <p class="text-gray-600 text-sm">Project Manager</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Sistem manajemen barang yang dikembangkan Gilang sangat membantu operasional perusahaan kami. Kualitas kode dan dokumentasinya sangat baik."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                            B
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Budi Santoso</h4>
+                            <p class="text-gray-600 text-sm">Network Supervisor</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Gilang memiliki kemampuan troubleshooting jaringan yang sangat baik. Dia selalu dapat menyelesaikan masalah dengan cepat dan efisien."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">
+                            G
+                        </div>
+                        <span class="ml-3 text-xl font-bold">Gilang Danuwindu</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        IT Network & Software Developer dengan pengalaman dalam pengembangan web, administrasi jaringan, dan pendidikan. 
+                        Berkomitmen memberikan solusi teknologi terbaik untuk kebutuhan bisnis dan pendidikan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/gilang-danuwindu-jihantoro/" class="text-gray-300 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:gilangdanuwinduif@gmail.com" class="text-gray-300 hover:text-blue-400 transition duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#beranda" class="text-gray-300 hover:text-white transition duration-300">Beranda</a></li>
+                        <li><a href="#tentang" class="text-gray-300 hover:text-white transition duration-300">Tentang</a></li>
+                        <li><a href="#keahlian" class="text-gray-300 hover:text-white transition duration-300">Keahlian</a></li>
+                        <li><a href="#pengalaman" class="text-gray-300 hover:text-white transition duration-300">Pengalaman</a></li>
+                        <li><a href="#testimoni" class="text-gray-300 hover:text-white transition duration-300">Testimoni</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span class="text-gray-300">gilangdanuwinduif@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <span class="text-gray-300">+62-813-xxx-xxxx</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                            <span class="text-gray-300">Bandung, Jawa Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-graduation-cap mr-3 text-blue-400"></i>
+                            <span class="text-gray-300">Guru & Developer</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2024 Gilang Danuwindu Jihantoro. Semua hak cipta dilindungi undang-undang.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-sm', 'bg-white/95');
+            } else {
+                header.classList.remove('backdrop-blur-sm', 'bg-white/95');
+            }
+        });
+    </script>
+</body>
 </html>
